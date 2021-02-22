@@ -53,7 +53,7 @@ import Container from '@material-ui/core/Container';
         if(!name || !startDate || !startHour || !endDate || !endHour) {
           alert("Preencha todos os campos")
         }
-        axios.post("http://localhost:3003/calcularHoras", body)
+        axios.post(process.env.REACT_APP_API_URL, body)
         .then(response => {
           setResponse(response.data)
         })
