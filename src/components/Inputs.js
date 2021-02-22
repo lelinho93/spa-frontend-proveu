@@ -53,7 +53,7 @@ import Container from '@material-ui/core/Container';
         if(!name || !startDate || !startHour || !endDate || !endHour) {
           alert("Preencha todos os campos")
         }
-        axios.post(process.env.REACT_APP_API_URL, body)
+        axios.post("https://spa-backend-proveu.herokuapp.com/calcularHoras", body)
         .then(response => {
           setResponse(response.data)
         })
